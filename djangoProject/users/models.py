@@ -29,7 +29,9 @@ class User(models.Model):
     # role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
 
     def __str__(self):
-        return f'{self.pk}'
+        return f'{self.pk}, {self.user_email}, {self.password}, ' \
+               f'{self.user_name}, {self.phone}, {self.birth}, {self.address},' \
+               f' {self.job}, {self.user_interests}, {self.token}'
 
     class Meta:
         db_table = "users"

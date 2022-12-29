@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import BlogBuser
+from .models import BlogBuser
 
 class BlogBuserSerializer(serializers.ModelSerializer):
     class Meta:
